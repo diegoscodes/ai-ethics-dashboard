@@ -1,131 +1,198 @@
----
-# 🧠 AI Monitoring & Ethics Dashboard
+🧠 AI Monitoring & Ethics Dashboard
 
-A professional **end-to-end Responsible AI project** that demonstrates how to **monitor, evaluate, and mitigate bias** in machine learning models using **Fairlearn** and **SHAP**, and visualize results through an interactive **Streamlit dashboard**.
+A professional end-to-end Responsible AI project that demonstrates how to monitor, evaluate, and mitigate bias in machine learning models using Fairlearn and SHAP, and visualize results through an interactive Streamlit dashboard.
 
----
+📋 Project Overview
 
-## 📋 Project Overview
+This project shows how organizations can apply Responsible AI principles by detecting and mitigating algorithmic bias.
+It uses the Adult Income Dataset to predict whether an individual earns more than $50K/year, while ensuring fairness across sensitive attributes such as gender and race.
 
-This project shows how organizations can **apply Responsible AI principles** by detecting and mitigating algorithmic bias.
-It uses the **Adult Income Dataset** to predict whether an individual earns more than **$50K/year**, while ensuring fairness across sensitive attributes such as **gender** and **race**.
+⚙️ Tech Stack
 
----
+🐍 Python 3.11
 
-## ⚙️ Tech Stack
+🤖 Scikit-learn – model training (Logistic Regression + Random Forest)
 
-* 🐍 **Python 3.11**
-* 🤖 **Scikit-learn** – model training (Logistic Regression)
-* ⚖️ **Fairlearn** – fairness evaluation & mitigation
-* 🧩 **SHAP** – model explainability (global & local)
-* 🌐 **Streamlit** – interactive dashboard
-* 📊 **Plotly** & **Matplotlib** – data visualization
-* 📦 **Pandas / NumPy / Joblib / TQDM** – data processing utilities
+⚖️ Fairlearn – fairness evaluation & mitigation
 
----
+🧩 SHAP – model explainability (global & local)
 
-## 🧩 Project Structure
+🌐 Streamlit – interactive dashboard
 
-```
+📊 Plotly & Matplotlib – data visualization
+
+📦 Pandas / NumPy / Joblib / TQDM – data processing utilities
+
+📝 ReportLab – PDF report export (Conclusions tab)
+
+🧩 Project Structure
 ai-ethics-dashboard/
 │
 ├── app/
-│   └── dashboard.py          # Streamlit app (Fairness + SHAP)
+│   └── dashboard.py              # Streamlit app (Performance, Fairness, Comparison, Group Fairness, Conclusions)
 │
 ├── data/
 │   └── raw/
-│       └── adult.csv         # Dataset (Adult Income)
+│       └── adult.csv             # Dataset (Adult Income)
+│
+├── models/                       # Saved artifacts (after training notebooks)
+│   ├── logistic_regression.joblib
+│   ├── random_forest.joblib
+│   ├── scaler.joblib
+│   └── encoders_label.joblib
 │
 ├── notebooks/
 │   ├── 01_data_exploration.ipynb
-│   ├── 02_model_training.ipynb
+│   ├── 02_model_training.ipynb   # GridSearchCV / cross-validation & model export
 │   └── 03_fairness_analysis.ipynb
+│
+├── reports/
+│	└── final_report.pdf          # Exported from the dashboard (Conclusions tab)
+│
+│
+├── assets/                       # 📸 Static media for README and dashboard
+│   ├── performance_tab.png
+│   ├── fairness_tab.png
+│   ├── comparison_tab.png
+│   ├── group_fairness_tab.png
+│   └── conclusions_tab.png
+│
 │
 ├── requirements.txt
 └── README.md
-```
 
----
 
-## 🚀 How to Run
 
-1. **Clone this repository:**
+🚀 Key Features
 
-   ```bash
-   git clone https://github.com/diegoscodes/ai-ethics-dashboard.git
-   cd ai-ethics-dashboard
-   ```
+✅ Multiple models: Logistic Regression (baseline) and Random Forest (tuned via GridSearchCV)
+✅ Performance monitoring: Accuracy, F1-score, ROC-AUC
+✅ Fairness monitoring: Demographic Parity Difference, Equalized Odds Difference
+✅ Group Fairness: per-group metrics and plots for sex and race (selection rate, F1)
+✅ Global Comparison Mode: a single toggle compares models across all tabs (Performance, Fairness, Group Fairness)
+✅ Conclusions tab: executive summary with ethical interpretation and recommendations
+✅ PDF Export: generate a professional report directly from the dashboard (ReportLab)
 
-2. **Create a virtual environment:**
+Mitigation options (e.g., ThresholdOptimizer/Reweighing) are discussed and prototyped in notebooks and planned for interactive integration.
 
-   ```bash
-   python -m venv .venv
-   .\.venv\Scripts\activate     # (Windows)
-   source .venv/bin/activate    # (macOS/Linux)
-   ```
+▶️ How to Run
 
-3. **Install dependencies:**
+Clone
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+git clone https://github.com/diegoscodes/ai-ethics-dashboard.git
+cd ai-ethics-dashboard
 
-4. **Launch the dashboard:**
 
-   ```bash
-   streamlit run app/dashboard.py
-   ```
+Virtual env
 
----
+python -m venv .venv
+.\.venv\Scripts\activate     # Windows
+# source .venv/bin/activate  # macOS/Linux
 
-## 📊 Key Features
 
-✅ **Fairness Analysis (Before vs After)**
- Compare accuracy, recall, and selection rate across sensitive groups.
+Install
 
-✅ **Bias Mitigation (Equal Opportunity)**
- Applies Fairlearn’s ThresholdOptimizer to balance true positive rates.
+pip install -r requirements.txt
 
-✅ **Explainability (SHAP)**
- Visualizes global feature importance and local prediction insights.
 
-✅ **Sensitive Attribute Selection**
- Switch between *gender* and *race* to analyze fairness from different perspectives.
+Launch
 
----
+streamlit run app/dashboard.py
 
-## 🔎 Results Summary
+🧭 Using the Dashboard
 
-| Attribute        | Before Mitigation         | After Mitigation         | Observation                   |
-| ---------------- | ------------------------- | ------------------------ | ----------------------------- |
-| **Gender (sex)** | Recall (M: 0.50, F: 0.20) | Recall (M/F ≈ 0.36)      | Balanced recall achieved      |
-| **Race**         | Moderate bias gap         | Reduced after mitigation | Fairer classification balance |
+Model selector (sidebar): choose baseline (LogReg) or tuned (Random Forest).
 
-> After mitigation, the model achieved **~0.81 accuracy** with significantly reduced bias, proving fairness can coexist with good performance.
+Compare both models side by side (sidebar): enables the Global Comparison Mode, updating all tabs to show both models (metrics, tables and grouped charts).
 
----
+Conclusions tab: view an executive summary and click “Export Detailed Report as PDF” to generate /reports/final_report.pdf.
 
-## 🧠 Learnings
+📊 Results (current run)
 
-* Bias often mirrors **real-world inequality** present in data.
-* Responsible AI focuses on **understanding, not hiding**, sensitive variables.
-* **Fairness ≠ perfection** — it’s an **ongoing monitoring process**.
+Random Forest (best tuned params via GridSearchCV)
 
----
+Accuracy ≈ 0.858
 
-## 📷 Preview
+F1-score ≈ 0.676
 
-*Add a screenshot or GIF of your Streamlit dashboard here.*
-Example:
-![Dashboard Preview](app/assets/dashboard_preview.png)
+ROC-AUC ≈ 0.911
 
----
+EO diff ≈ 0.079 (lower is fairer)
 
-## 👤 Author
+Logistic Regression (baseline)
 
-**Diego Ferreira**
-🌍 [LinkedIn](https://www.linkedin.com/in/diegoscodes) • 💻 [GitHub](https://github.com/diegoscodes)
+Accuracy ≈ 0.825
 
----
+F1-score ≈ 0.557
 
-🧩 *Built as part of an AI & Machine Learning professional portfolio project demonstrating ethical, explainable, and fair model development.*
+ROC-AUC ≈ 0.854
+
+EO diff ≈ 0.261
+
+Takeaway: Random Forest achieves a stronger performance–fairness balance and is the recommended candidate for deployment, with ongoing ethical monitoring.
+
+🔎 Group Fairness (Sex & Race)
+
+Per-group selection rate and F1 reveal how predictions differ across sex and race.
+
+Smaller gaps between bars indicate more equitable behavior.
+
+The dashboard highlights potential disparities with automatic insights (success/info/warning).
+
+🧠 Learnings
+
+Dataset bias often reflects real-world inequality; monitoring + mitigation are essential.
+
+Fairness is not static — it requires continuous auditing (concept/data drift).
+
+Balancing interpretability vs. performance is a design decision; using a transparent baseline plus a tuned ensemble provides both.
+
+📝 PDF Reporting
+
+Inside 🧾 Conclusions, click “Export Detailed Report as PDF” to generate:
+
+Results summary (both models),
+
+Interpretation & ethical insights,
+
+Recommendations,
+
+Final reflection,
+
+Results Summary & Challenges (explicitly addressing the assignment’s “item 8”).
+
+The file is saved to: reports/final_report.pdf.
+G
+📷 Preview (optional)
+
+
+assets/
+├── performance_tab.png
+├── fairness_tab.png
+├── comparison_tab.png
+├── group_fairness_tab.png
+└── conclusions_tab.png
+
+
+
+![Dashboard – Comparison](assets/performance_tab.png)
+
+test
+
+## 📷 Dashboard Previews
+
+| Performance | Fairness | Comparison |
+|--------------|-----------|-------------|
+| ![Performance](assets/performance_tab.png) | ![Fairness](assets/fairness_tab.png) | ![Comparison](assets/comparison_tab.png) |
+
+| Group Fairness | Conclusions |
+|----------------|-------------|
+| ![Group Fairness](assets/group_fairness_tab.png) | ![Conclusions](assets/conclusions_tab.png) |
+
+👤 Author
+
+Diego Ferreira
+🌍 Ireland • 🔗 LinkedIn
+ • 💻 GitHub
+
+Built as part of a professional Responsible AI portfolio project combining performance, fairness, explainability, and reporting.
