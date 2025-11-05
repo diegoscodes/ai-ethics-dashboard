@@ -33,9 +33,9 @@ ai-ethics-dashboard/
 │
 ├── data/
 │   └── raw/
-│       └── adult.csv             # Dataset (Adult Income)
+│       └── adult.csv             # Dataset (UCI Adult Income)
 │
-├── models/                       # Saved artifacts (after training notebooks)
+├── models/                       # Saved artifacts (from training notebooks)
 │   ├── logistic_regression.joblib
 │   ├── random_forest.joblib
 │   ├── scaler.joblib
@@ -43,20 +43,18 @@ ai-ethics-dashboard/
 │
 ├── notebooks/
 │   ├── 01_data_exploration.ipynb
-│   ├── 02_model_training.ipynb   # GridSearchCV / cross-validation & model export
+│   ├── 02_model_training.ipynb   # GridSearchCV & cross-validation
 │   └── 03_fairness_analysis.ipynb
 │
 ├── reports/
-│	└── final_report.pdf          # Exported from the dashboard (Conclusions tab)
+│   └── final_report.pdf          # Exported from dashboard (Conclusions tab)
 │
-│
-├── assets/                       # 📸 Static media for README and dashboard
+├── assets/                       # 📸 Static visuals for README & dashboard
 │   ├── performance_tab.png
 │   ├── fairness_tab.png
 │   ├── comparison_tab.png
 │   ├── group_fairness_tab.png
 │   └── conclusions_tab.png
-│
 │
 ├── requirements.txt
 └── README.md
