@@ -26,7 +26,7 @@ It uses the Adult Income Dataset to predict whether an individual earns more tha
 📝 ReportLab – PDF report export (Conclusions tab)
 
 
-🧩 Project Structure
+## 🧩 Project Structure
 ai-ethics-dashboard/
 ├── app/
 │ └── dashboard.py # Streamlit app (Performance, Fairness, Comparison, Group Fairness, Conclusions)
