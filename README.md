@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Ba.png" alt="AI Monitoring & Ethics Dashboard Banner" width="100%">
+  <img src="banner.png" alt="AI Monitoring & Ethics Dashboard Banner" width="100%">
 </p>
 
 
