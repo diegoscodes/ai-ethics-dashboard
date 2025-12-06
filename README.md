@@ -2,6 +2,13 @@
   <img src="Banner.png" alt="AI Monitoring & Ethics Dashboard Banner" width="100%">
 </p>
 
+## 🎥 Project Demo Video
+
+Click below to watch the demonstration video:
+
+➡ [AIMonitoringandEthicsDashboard.mp4](videos/AIMonitoringandEthicsDashboard.mp4)
+
+
 
 🧠 AI Monitoring & Ethics Dashboard
 
