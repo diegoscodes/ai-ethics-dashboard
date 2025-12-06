@@ -9,6 +9,12 @@ Click below to watch the demonstration video:
 ➡ [AIMonitoringandEthicsDashboard.mp4](videos/AIMonitoringandEthicsDashboard.mp4)
 
 
+## 🎥 Project Demo Video
+
+<video src="videos/AIMonitoringandEthicsDashboard.mp4" controls width="100%"></video>
+
+
+
 
 🧠 AI Monitoring & Ethics Dashboard
 
