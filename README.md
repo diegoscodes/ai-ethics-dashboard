@@ -174,9 +174,6 @@ assets/
 └── conclusions_tab.png
 
 
-
-![Dashboard – Comparison](assets/performance_tab.png)
-
 test
 
 ## 📷 Dashboard Previews
