@@ -25,42 +25,41 @@ It uses the Adult Income Dataset to predict whether an individual earns more tha
 
 📝 ReportLab – PDF report export (Conclusions tab)
 
+
 🧩 Project Structure
+```
 ai-ethics-dashboard/
-│
 ├── app/
-│   └── dashboard.py              # Streamlit app (Performance, Fairness, Comparison, Group Fairness, Conclusions)
+│ └── dashboard.py # Streamlit app (Performance, Fairness, Comparison, Group Fairness, Conclusions)
 │
 ├── data/
-│   └── raw/
-│       └── adult.csv             # Dataset (Adult Income)
+│ └── raw/
+│ └── adult.csv # Dataset (UCI Adult Income)
 │
-├── models/                       # Saved artifacts (after training notebooks)
-│   ├── logistic_regression.joblib
-│   ├── random_forest.joblib
-│   ├── scaler.joblib
-│   └── encoders_label.joblib
+├── models/ # Saved artifacts (from training notebooks)
+│ ├── logistic_regression.joblib
+│ ├── random_forest.joblib
+│ ├── scaler.joblib
+│ └── encoders_label.joblib
 │
 ├── notebooks/
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_model_training.ipynb   # GridSearchCV / cross-validation & model export
-│   └── 03_fairness_analysis.ipynb
+│ ├── 01_data_exploration.ipynb
+│ ├── 02_model_training.ipynb # GridSearchCV / cross-validation & model export
+│ └── 03_fairness_analysis.ipynb
 │
 ├── reports/
-│	└── final_report.pdf          # Exported from the dashboard (Conclusions tab)
+│ └── final_report.pdf # Exported from the dashboard (Conclusions tab)
 │
-│
-├── assets/                       # 📸 Static media for README and dashboard
-│   ├── performance_tab.png
-│   ├── fairness_tab.png
-│   ├── comparison_tab.png
-│   ├── group_fairness_tab.png
-│   └── conclusions_tab.png
-│
+├── assets/ # 📸 Static visuals for README and dashboard
+│ ├── performance_tab.png
+│ ├── fairness_tab.png
+│ ├── comparison_tab.png
+│ ├── group_fairness_tab.png
+│ └── conclusions_tab.png
 │
 ├── requirements.txt
 └── README.md
-
+```
 
 
 🚀 Key Features
