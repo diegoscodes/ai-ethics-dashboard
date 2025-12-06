@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="assets/banner.png" alt="AI Monitoring & Ethics Dashboard Banner" width="100%">
+</p>
+
+
 🧠 AI Monitoring & Ethics Dashboard
 
 A professional end-to-end Responsible AI project that demonstrates how to monitor, evaluate, and mitigate bias in machine learning models using Fairlearn and SHAP, and visualize results through an interactive Streamlit dashboard.
