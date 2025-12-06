@@ -4,6 +4,10 @@
 
 ## 🎥 Project Demo Video
 
+
+https://github.com/user-attachments/assets/58bbff45-068b-4ab8-8d30-637ebac03e2d
+
+
 Click below to watch the demonstration video:
 
 ➡ [AIMonitoringandEthicsDashboard.mp4](videos/AIMonitoringandEthicsDashboard.mp4)
