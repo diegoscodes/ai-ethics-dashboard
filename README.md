@@ -1,31 +1,8 @@
-🧠 AI Monitoring & Ethics Dashboard
-
-A professional end-to-end Responsible AI project that demonstrates how to monitor, evaluate, and mitigate bias in machine learning models using Fairlearn and SHAP, and visualize results through an interactive Streamlit dashboard.
-
-📋 Project Overview
-
-This project shows how organizations can apply Responsible AI principles by detecting and mitigating algorithmic bias.
-It uses the Adult Income Dataset to predict whether an individual earns more than $50K/year, while ensuring fairness across sensitive attributes such as gender and race.
-
-⚙️ Tech Stack
-
-🐍 Python 3.11
-
-🤖 Scikit-learn – model training (Logistic Regression + Random Forest)
-
-⚖️ Fairlearn – fairness evaluation & mitigation
-
-🧩 SHAP – model explainability (global & local)
-
-🌐 Streamlit – interactive dashboard
-
-📊 Plotly & Matplotlib – data visualization
-
-📦 Pandas / NumPy / Joblib / TQDM – data processing utilities
-
+@@ -26,171 +26,172 @@
 📝 ReportLab – PDF report export (Conclusions tab)
 
 
+```🧩 Project Structure
 🧩 Project Structure
 ```
 ai-ethics-dashboard/
@@ -172,6 +149,9 @@ assets/
 ├── group_fairness_tab.png
 └── conclusions_tab.png
 
+
+
+![Dashboard – Comparison](assets/performance_tab.png)
 
 test
 
