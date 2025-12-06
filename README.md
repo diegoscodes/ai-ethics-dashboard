@@ -2,19 +2,11 @@
   <img src="Banner.png" alt="AI Monitoring & Ethics Dashboard Banner" width="100%">
 </p>
 
-## 🎥 Project Demo Video
+## 🎥 AI Ethics Dashboard – Explanation & Insights Video
 
 
 https://github.com/user-attachments/assets/58bbff45-068b-4ab8-8d30-637ebac03e2d
 
-
-Click below to watch the demonstration video:
-
-➡ [AIMonitoringandEthicsDashboard.mp4](videos/AIMonitoringandEthicsDashboard.mp4)
-
-<video controls width="100%">
-  <source src="https://github.com/diegoscodes/ai-ethics-dashboard/raw/refs/heads/main/videos/AIMonitoringandEthicsDashboard.mp4" type="video/mp4">
-</video>
 
 
 🧠 AI Monitoring & Ethics Dashboard
