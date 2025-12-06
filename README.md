@@ -11,9 +11,11 @@ Click below to watch the demonstration video:
 ## 🎥 Project Demo Video
 
 <video controls width="100%">
-  <source src="[https://raw.githubusercontent.com/diegoscodes/ai-ethics-dashboard/main/videos/AIMonitoringandEthicsDashboard.mp4](https://github.com/diegoscodes/ai-ethics-dashboard/raw/refs/heads/main/videos/AIMonitoringandEthicsDashboard.mp4)" type="video/mp4">
+  <source src="https://github.com/diegoscodes/ai-ethics-dashboard/raw/refs/heads/main/videos/AIMonitoringandEthicsDashboard.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+
 
 
 🧠 AI Monitoring & Ethics Dashboard
