@@ -1,4 +1,6 @@
-
+<p align="center">
+  <img src="Banner.png" alt="AI Monitoring & Ethics Dashboard Banner" width="100%">
+</p>
 
 
 
